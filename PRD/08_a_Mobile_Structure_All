@@ -1,0 +1,282 @@
+---
+title: "Developer Blog - Complete Structure & Mobile Optimization"
+section: "Integrated Project Requirements"
+version: "1.0"
+status: "Draft"
+---
+
+# Developer Portfolio Blog - Complete Structure & Mobile Optimization Guide
+
+project:
+  name: "Developer Portfolio Blog"
+  description: "A developer blog combining Chirpy Jekyll theme with shadcn/ui design system"
+  version: "1.0"
+  status: "Draft"
+
+goals:
+  - "Showcase personal projects and portfolio"
+  - "Technical blog writing and sharing"
+  - "Developer community engagement"
+  - "Personal branding as a developer"
+
+target_audience:
+  - "Developers and tech professionals"
+  - "Recruiters and collaboration partners"
+  - "Technical blog readers"
+  - "Junior developers and learners"
+
+design_philosophy:
+  - "Chirpy Jekyll theme functionality"
+  - "Modern shadcn/ui design system"
+  - "Community features through comment system"
+  - "Mobile-first accessibility approach"
+
+technology_stack:
+  frontend:
+    - "Next.js"
+    - "TypeScript"
+    - "Tailwind CSS"
+    - "shadcn/ui components"
+  
+  backend:
+    - "Supabase (comments, authentication)"
+    - "Markdown parsing"
+    - "Static Site Generation"
+  
+  deployment:
+    - "Vercel"
+    - "GitHub Actions"
+    - "Continuous Integration"
+
+key_features:
+  content:
+    - "Markdown-based blog posting"
+    - "Code block syntax highlighting"
+    - "Tag and category system"
+    - "Automatic Table of Contents (TOC)"
+  
+  community:
+    - "Comment system (Supabase-based)"
+    - "Real-time likes and reactions"
+    - "Social sharing functionality"
+    - "Active discussion features"
+  
+  design:
+    - "Modern UI components"
+    - "Responsive design"
+    - "Dark mode support"
+    - "Animations and transitions"
+
+# DESKTOP & GENERAL LAYOUT STRUCTURE
+
+layout:
+  desktop:
+    sidebar: "Fixed left sidebar (280px, dark background with subtle border)"
+    main_content: "Right main content area (remaining space, light background)"
+  tablet:
+    sidebar: "Slide overlay (Sheet component)"
+  mobile:
+    header: "Top header bar (mobile only)"
+
+sidebar:
+  profile_card:
+    styles: "rounded-lg, border, shadow-sm"
+    elements:
+      - "Profile photo (circular, 120px, ring-2 ring-border)"
+      - "Name (font-semibold text-lg)"
+      - "Tagline (text-muted-foreground)"
+      - "Status badge (Badge variant='secondary')"
+  
+  navigation_card:
+    styles: "mt-6"
+    items:
+      - name: "HOME"
+        icon: "Lucide House"
+      - name: "POSTS"
+        icon: "Lucide PenTool"
+      - name: "CATEGORIES"
+        icon: "Lucide Folder"
+      - name: "TAGS"
+        icon: "Lucide Tag"
+      - name: "ARCHIVES"
+        icon: "Lucide Archive"
+      - name: "ABOUT"
+        icon: "Lucide User"
+    hover_styles: "hover:bg-accent hover:text-accent-foreground"
+  
+  social_links:
+    styles: "bottom, flex gap-2"
+    buttons: "GitHub, LinkedIn, Email (Button variant='ghost' size='icon')"
+
+responsive_behavior:
+  desktop: "Fixed sidebar"
+  tablet: "Slide overlay sidebar (Sheet component)"
+  mobile: "Top header + Drawer navigation"
+
+theme_colors:
+  light_mode:
+    background: "hsl(0 0% 100%)"
+    foreground: "hsl(222.2 84% 4.9%)"
+    card: "hsl(0 0% 100%)"
+    card_foreground: "hsl(222.2 84% 4.9%)"
+    border: "hsl(214.3 31.8% 91.4%)"
+    accent: "hsl(210 40% 98%)"
+    muted: "hsl(210 40% 96%)"
+    primary: "hsl(222.2 47.4% 11.2%)"
+
+dark_mode_toggle:
+  position: "Top-right fixed"
+  style: "Button variant='ghost' size='icon'"
+  icon: "Moon/Sun icons (Lucide)"
+  animation: "Smooth transition animation"
+
+# MOBILE OPTIMIZATION SPECIFICATIONS
+
+mobile_layout:
+  viewport: "375px baseline"
+  header:
+    position: "sticky top-0, backdrop-blur"
+    elements:
+      left: "Sheet trigger (Button variant='ghost' size='icon', Menu icon)"
+      center: "Site logo/title (font-bold)"
+      right: "Dark mode toggle + search (Button variant='ghost' size='icon')"
+
+mobile_navigation:
+  component: "Sheet"
+  properties: "side='left', className='w-80'"
+  sections:
+    header:
+      - "Profile section (Avatar + name + bio)"
+      - "Status Badge"
+    menu:
+      style: "Button variant='ghost' (justify-start, full width)"
+      item_height: "minimum height 48px"
+      format: "icon + label"
+      active_state: "current page highlight"
+    footer: "Social links (flex gap-2)"
+
+mobile_content:
+  search_section:
+    style: "px-4 py-2"
+    search_input: "Input with Search icon (rounded-full)"
+    filters:
+      style: "horizontal scroll"
+      format: "Badge list (gap-2, scrollable)"
+  
+  blog_cards:
+    style: "px-4 space-y-4"
+    card:
+      container: "Card className='overflow-hidden'"
+      thumbnail: "aspect-video, w-full"
+      content:
+        style: "p-4"
+        elements:
+          - "Category Badge (absolute top-2 left-2)"
+          - "Title (text-lg font-semibold, line-clamp-2)"
+          - "Description (text-sm text-muted-foreground, line-clamp-2)"
+          - "Tags (flex gap-1, horizontal scroll)"
+        meta:
+          style: "flex justify-between, text-xs"
+          left: "Date, reading time"
+          right: "Bookmark Button (size='sm')"
+
+touch_optimization:
+  minimum_touch_area: "44x44px for all interactive elements"
+  full_card_touch: "Entire card area is touchable"
+  gesture_support: "Swipe gestures enabled"
+  pull_to_refresh: "RefreshCw icon animation"
+
+swipe_gestures:
+  card_swipe_right: "Bookmark action"
+  card_swipe_left: "Share action"
+  comment_swipe_right: "Like action"
+  comment_swipe_left: "Reply action"
+
+mobile_specific_features:
+  floating_action_button:
+    style: "Button (size='icon', className='fixed bottom-4 right-4')"
+    icon: "Search icon, shadow-lg"
+  infinite_scroll:
+    loading_state: "Skeleton cards"
+  progress_indicator:
+    style: "Progress bar (fixed top, thin)"
+
+mobile_post_page_optimizations:
+  comment_writing: "Full-screen Sheet for writing"
+  table_of_contents: "Collapsible component"
+  reply_system: "Navigate to separate page for replies"
+  comment_actions: "Swipe gestures for like/reply"
+
+performance_optimizations:
+  - "Image lazy loading"
+  - "Optimized image sizes for small screens"
+  - "Touch event debouncing"
+  - "Scroll event throttling"
+  - "Offline support (Service Worker)"
+
+accessibility_features:
+  - "Appropriate color contrast ratios"
+  - "Sufficient touch target sizes"
+  - "Screen reader support"
+  - "Keyboard navigation support"
+  - "Focus management for modals/sheets"
+
+# PROJECT ROADMAP
+
+development_phases:
+  phase1:
+    title: "Foundation"
+    tasks:
+      - "Basic blog functionality implementation"
+      - "Responsive design application"
+      - "Markdown rendering"
+      - "Basic mobile layout"
+  
+  phase2:
+    title: "Community Features"
+    tasks:
+      - "Comment system integration"
+      - "User authentication"
+      - "Like/bookmark functionality"
+      - "Mobile gesture implementation"
+  
+  phase3:
+    title: "Enhancement"
+    tasks:
+      - "Enhanced search functionality"
+      - "Performance optimization"
+      - "Project showcase addition"
+      - "Mobile performance tuning"
+  
+  future_enhancements:
+    - "Newsletter integration"
+    - "Membership features"
+    - "Custom theme support"
+    - "Progressive Web App (PWA) features"
+
+# TESTING & VALIDATION
+
+testing_requirements:
+  responsive_testing:
+    - "Desktop (1920px+)"
+    - "Tablet (768px-1024px)"
+    - "Mobile (320px-767px)"
+  
+  mobile_specific_testing:
+    - "Touch gesture accuracy"
+    - "Swipe response time"
+    - "Loading performance on mobile networks"
+    - "Offline functionality"
+  
+  accessibility_testing:
+    - "Screen reader compatibility"
+    - "Keyboard navigation"
+    - "Color contrast validation"
+    - "Touch target size validation"
+
+deployment_considerations:
+  mobile_optimization:
+    - "Mobile-first CSS approach"
+    - "Optimized asset delivery"
+    - "Service Worker caching strategy"
+    - "Progressive enhancement"
