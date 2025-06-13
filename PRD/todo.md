@@ -11,10 +11,10 @@
 - [x] 동적 라우팅 동작 확인 ✅
 
 ### Day 3-4: 컴포넌트 분리 및 최적화
-- [ ] PostSidebar 컴포넌트 분리
-- [ ] PostContent 컴포넌트 분리
-- [ ] CommentsSection 컴포넌트 분리
-- [ ] 반응형 디자인 적용
+- [x] PostSidebar 컴포넌트 분리 ✅
+- [x] PostContent 컴포넌트 분리 ✅
+- [x] CommentsSection 컴포넌트 분리 ✅
+- [x] 반응형 디자인 적용 ✅
 
 ### Day 5-7: 다음 페이지 준비
 - [ ] 03_categories_tags.html 분석
