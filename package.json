@@ -15,7 +15,8 @@
     "docs:update": "node scripts/docs-manager.js --update-stats",
     "docs:manage": "node scripts/docs-manager.js",
     "design:extract": "node scripts/extract-design-tokens.js",
-    "design:figma": "node scripts/figma-mcp-sync.js"
+    "design:figma": "node scripts/figma-mcp-sync.js",
+    "page:complete": "node scripts/page-completion-workflow.js"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
