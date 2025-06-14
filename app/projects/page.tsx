@@ -54,6 +54,7 @@ export default function ProjectsPage() {
                     placeholder="프로젝트 검색..."
                     className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#101518] focus:outline-0 focus:ring-0 border-none bg-[#eaedf1] focus:border-none h-full placeholder:text-[#5c748a] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
                     value=""
+                    readOnly
                   />
                 </div>
               </label>
