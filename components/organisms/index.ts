@@ -10,4 +10,5 @@ export { default as CategoryGrid } from './CategoryGrid';
 export { default as AboutHeader } from './AboutHeader';
 export { default as AboutContent } from './AboutContent';
 export { default as SkillsSection } from './SkillsSection';
-export { default as TimelineSection } from './TimelineSection'; 
+export { default as TimelineSection } from './TimelineSection';
+export { default as ProjectCard } from './ProjectCard'; 

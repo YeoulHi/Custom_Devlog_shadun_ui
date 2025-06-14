@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { notFound } from 'next/navigation';
 import { Sidebar } from '../../../components/organisms';
 import { getCategoryBySlug } from '../../../data/categories';
