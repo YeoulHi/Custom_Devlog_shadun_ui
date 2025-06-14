@@ -23,12 +23,78 @@
 
 ### Day 8-10: 카테고리 및 태그 페이지 구현
 - [x] CategoryGrid 컴포넌트 생성 ✅
-- [x] 카테고리 데이터 모델 정의 ✅
-- [x] 카테고리 페이지 구현 ✅
-- [x] 카테고리 상세 페이지 구현 ✅
-- [x] 태그 페이지 구현 ✅
-- [x] 태그 상세 페이지 구현 ✅
-- [ ] 반응형 디자인 최적화
+- [x] 카테고리 데이터 모델 정의 (types/category.ts) ✅
+- [x] 카테고리 더미 데이터 생성 (data/categories.ts) ✅
+- [x] 카테고리 페이지 구현 (app/categories/page.tsx) ✅
+- [x] 카테고리 상세 페이지 구현 (app/categories/[slug]/page.tsx) ✅
+- [x] 태그 페이지 구현 (app/tags/page.tsx) ✅
+- [x] 태그 상세 페이지 구현 (app/tags/[slug]/page.tsx) ✅
+
+### Day 11-13: About 페이지 구현
+- [x] AboutHeader 컴포넌트 구현 ✅
+- [x] AboutContent 컴포넌트 구현 ✅
+- [x] SkillsSection 컴포넌트 구현 ✅
+- [x] TimelineSection 컴포넌트 구현 ✅
+- [x] About 페이지 데이터 모델 정의 (types/about.ts) ✅
+- [x] About 페이지 더미 데이터 생성 (data/about.ts) ✅
+- [x] About 페이지 구현 (app/about/page.tsx) ✅
+
+### Day 14-16: 프로젝트 페이지 구현
+- [ ] ProjectGrid 컴포넌트 구현
+- [ ] ProjectCard 컴포넌트 구현
+- [ ] ProjectFilter 컴포넌트 구현
+- [ ] 프로젝트 데이터 모델 정의 (types/project.ts)
+- [ ] 프로젝트 더미 데이터 생성 (data/projects.ts)
+- [ ] 프로젝트 페이지 구현 (app/projects/page.tsx)
+
+### Day 17-19: 검색 페이지 구현
+- [ ] SearchBar 컴포넌트 구현
+- [ ] SearchResults 컴포넌트 구현
+- [ ] FilterOptions 컴포넌트 구현
+- [ ] 검색 기능 구현 (클라이언트 사이드)
+- [ ] 검색 페이지 구현 (app/search/page.tsx)
+
+## 🚀 마일스톤 1: 기본 기능 구현
+
+### 모든 페이지 기능 구현
+- [x] 메인 페이지 (app/page.tsx) ✅
+- [x] 포스트 상세 페이지 (app/posts/[slug]/page.tsx) ✅
+- [x] 카테고리 페이지 (app/categories/page.tsx) ✅
+- [x] 카테고리 상세 페이지 (app/categories/[slug]/page.tsx) ✅
+- [x] 태그 페이지 (app/tags/page.tsx) ✅
+- [x] 태그 상세 페이지 (app/tags/[slug]/page.tsx) ✅
+- [x] About 페이지 (app/about/page.tsx) ✅
+- [ ] 프로젝트 페이지 (app/projects/page.tsx)
+- [ ] 검색 페이지 (app/search/page.tsx)
+
+### 알려진 이슈
+- [ ] 반응형 디자인 일부 깨짐 (모바일 뷰)
+- [ ] 다크모드 토글 기능 구현
+- [ ] 이미지 최적화 적용 (Next.js Image 컴포넌트)
+
+## 🚀 마일스톤 2: 고급 기능 구현
+
+### 데이터 연동
+- [ ] MDX 파일에서 포스트 데이터 로드
+- [ ] 실제 프로젝트 데이터 연동
+- [ ] 댓글 기능 구현 (외부 서비스 연동)
+
+### 사용자 경험 개선
+- [ ] 페이지 전환 애니메이션
+- [ ] 무한 스크롤 또는 페이지네이션
+- [ ] 검색 자동완성 기능
+
+## 🚀 마일스톤 3: 배포 및 최적화
+
+### 성능 최적화
+- [ ] 코드 스플리팅 및 지연 로딩
+- [ ] 이미지 최적화
+- [ ] SEO 최적화
+
+### 배포
+- [ ] Vercel 또는 Netlify에 배포
+- [ ] 도메인 연결
+- [ ] 분석 도구 설정 (Google Analytics)
 
 ## 🔧 현재 사용 중인 기술 스택
 

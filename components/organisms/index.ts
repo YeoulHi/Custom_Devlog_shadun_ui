@@ -7,3 +7,7 @@ export { default as PostContent } from './PostContent';
 export { default as PostSidebar } from './PostSidebar';
 export { default as CommentsSection } from './CommentsSection';
 export { default as CategoryGrid } from './CategoryGrid'; 
+export { default as AboutHeader } from './AboutHeader';
+export { default as AboutContent } from './AboutContent';
+export { default as SkillsSection } from './SkillsSection';
+export { default as TimelineSection } from './TimelineSection'; 
