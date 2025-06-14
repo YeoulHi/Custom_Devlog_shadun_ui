@@ -20,15 +20,15 @@
   - [x] 커밋 및 푸시 (`git commit -m "Add search link to sidebar"`) ✅
 
 ### 3단계: 전역 레이아웃 및 URL 라우팅 통합 (Day 17)
-- [ ] 전역 Header 컴포넌트 통합
-  - [ ] Root layout에 Header 컴포넌트 추가
-  - [ ] 홈페이지에서 중복 헤더 제거
-  - [ ] 테스트 확인 (`npm run dev`로 로컬 확인)
-  - [ ] 커밋 (`git commit -m "Integrate global header in root layout"`)
-- [ ] 페이지 간 URL 라우팅 개선
-  - [ ] 홈페이지 포스트 목록에 적절한 링크 추가
-  - [ ] 테스트 확인 (`npm run dev`로 로컬 확인)
-  - [ ] 커밋 및 푸시 (`git commit -m "Improve URL routing between pages"`)
+- [x] 전역 Header 컴포넌트 통합 ✅
+  - [x] Root layout에 Header 컴포넌트 추가 ✅
+  - [x] 홈페이지에서 중복 헤더 제거 ✅
+  - [x] 테스트 확인 (`npm run dev`로 로컬 확인) ✅
+  - [x] 커밋 (`git commit -m "Integrate global header in root layout"`) ✅
+- [x] 페이지 간 URL 라우팅 개선 ✅
+  - [x] 홈페이지 포스트 목록에 적절한 링크 추가 ✅
+  - [x] 테스트 확인 (`npm run dev`로 로컬 확인) ✅
+  - [x] 커밋 및 푸시 (`git commit -m "Improve URL routing between pages"`) ✅
 
 ### 4단계: Vercel MCP 기본 설정 (Day 18)
 - [ ] Vercel 프로젝트 초기 설정
@@ -141,7 +141,7 @@
 
 ## 📊 프로젝트 진행률
 
-### 전체 진행률: 77% 
+### 전체 진행률: 80% 
 - 프로젝트 설정: ✅ 100%
 - 기본 컴포넌트: ✅ 100% (Header, Sidebar)
 - 홈페이지: ✅ 100%
@@ -151,7 +151,7 @@
 - 프로젝트 페이지: ✅ 100%
 - 검색 페이지 기본 구조: ✅ 100%
 - 페이지 연결 작업: ✅ 100%
-- 전역 레이아웃 및 URL 라우팅: 🔄 50%
+- 전역 레이아웃 및 URL 라우팅: ✅ 100%
 - Vercel MCP 작업: 🔜 0%
 - Supabase MCP 작업: 🔜 0%
 - 데이터 연동: ⏳ 0% (후순위)
