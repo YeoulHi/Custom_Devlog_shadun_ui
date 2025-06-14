@@ -13,6 +13,7 @@ import {
   Github, 
   Linkedin, 
   Mail,
+  Search,
   LucideIcon
 } from 'lucide-react';
 
@@ -65,6 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     { href: '/posts', icon: FileText, label: 'POSTS' },
     { href: '/categories', icon: List, label: 'CATEGORIES' },
     { href: '/tags', icon: Hash, label: 'TAGS' },
+    { href: '/search', icon: Search, label: 'SEARCH' },
     { href: '/archives', icon: Archive, label: 'ARCHIVES' },
     { href: '/about', icon: User, label: 'ABOUT' },
   ];
