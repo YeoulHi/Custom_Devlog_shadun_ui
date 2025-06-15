@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { getAllPosts } from '@/data/posts';
-import Header from '@/components/organisms/Header';
 
 export default function PostsPage() {
   const posts = getAllPosts();
@@ -17,9 +16,6 @@ export default function PostsPage() {
 
   return (
     <main className="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden">
-      {/* 헤더 컴포넌트 */}
-      <Header />
-
       {/* 메인 레이아웃 */}
       <div className="layout-container flex h-full grow flex-col">
         <div className="gap-1 px-6 flex flex-1 justify-center py-5">

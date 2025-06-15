@@ -4,7 +4,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { getPostBySlug } from '@/data/posts';
-import Header from '@/components/organisms/Header';
 import Sidebar from '@/components/organisms/Sidebar';
 
 interface PostPageProps {
@@ -46,9 +45,6 @@ export default function PostPage({ params }: PostPageProps) {
 
   return (
     <main className="relative flex size-full min-h-screen flex-col bg-gray-50 group/design-root overflow-x-hidden">
-      {/* 헤더 컴포넌트 */}
-      <Header />
-
       {/* 메인 레이아웃 */}
       <div className="layout-container flex h-full grow flex-col">
         <div className="gap-1 px-6 flex flex-1 justify-center py-5">
