@@ -36,7 +36,17 @@ export interface Comment {
   content: string;
   createdAt: string;
   likes: number;
+  dislikes?: number;
   replies?: Reply[];
+}
+
+// 관련 포스트 타입
+export interface RelatedPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  thumbnail: string;
 }
 
 // 포스트 타입
@@ -47,6 +57,8 @@ export interface Post {
   excerpt: string;
   content: string;
   author: Author;
+  authorAvatar?: string;
+  authorBio?: string;
   publishedAt: string;
   category: string;
   tags: string[];
@@ -56,4 +68,5 @@ export interface Post {
   comments: Comment[];
   isPublished: boolean;
   isFeatured: boolean;
+  relatedPosts?: RelatedPost[];
 } 
