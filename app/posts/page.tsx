@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { getAllPosts } from '@/data/posts';
 import { sortPosts, SortType, filterPostsByCategory } from '@/utils/postUtils';
-import { ChevronDown, List, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // 포스트 목록 페이지 컴포넌트
 export default function PostsPage() {
