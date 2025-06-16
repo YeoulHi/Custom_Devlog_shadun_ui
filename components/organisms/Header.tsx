@@ -21,8 +21,8 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <header className={`flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#eaedf1] px-10 py-3 ${className}`}>
-      {/* 로고 섹션 */}
-      <div className="flex items-center gap-4 text-[#101518]">
+      {/* 로고 섹션 - 클릭 시 홈으로 이동 */}
+      <Link href="/" className="flex items-center gap-4 text-[#101518] cursor-pointer hover:opacity-80 transition-opacity">
         <div className="size-4">
           <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({
           </svg>
         </div>
         <h2 className="text-[#101518] text-lg font-bold leading-tight tracking-[-0.015em]">TechBlog</h2>
-      </div>
+      </Link>
 
       {/* 네비게이션 및 액션 버튼 섹션 */}
       <div className="flex flex-1 justify-end gap-8">

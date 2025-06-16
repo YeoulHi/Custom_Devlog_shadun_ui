@@ -91,8 +91,8 @@ const Sidebar: React.FC<SidebarProps> = ({
       <div className="flex h-full min-h-[700px] flex-col justify-between bg-gray-50 p-4">
         {/* 상단 섹션: 프로필 + 네비게이션 */}
         <div className="flex flex-col gap-4">
-          {/* 프로필 섹션 */}
-          <div className="flex gap-3">
+          {/* 프로필 섹션 - 클릭 시 홈으로 이동 */}
+          <Link href="/" className="flex gap-3 cursor-pointer hover:opacity-80 transition-opacity">
             <div
               className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
               style={{
@@ -103,7 +103,7 @@ const Sidebar: React.FC<SidebarProps> = ({
               <h1 className="text-[#101518] text-base font-medium leading-normal">{profile.name}</h1>
               <p className="text-[#5c748a] text-sm font-normal leading-normal">{profile.title}</p>
             </div>
-          </div>
+          </Link>
 
           {/* 네비게이션 메뉴 */}
           <nav className="flex flex-col gap-2">

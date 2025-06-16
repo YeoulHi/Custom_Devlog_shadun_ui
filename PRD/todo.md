@@ -29,6 +29,11 @@
   - [x] 홈페이지 포스트 목록에 적절한 링크 추가 ✅
   - [x] 테스트 확인 (`npm run dev`로 로컬 확인) ✅
   - [x] 커밋 및 푸시 (`git commit -m "Improve URL routing between pages"`) ✅
+- [x] 로고 영역에 홈 링크 추가 ✅
+  - [x] Header 컴포넌트 로고에 홈 링크 추가 ✅
+  - [x] Sidebar 컴포넌트 프로필에 홈 링크 추가 ✅
+  - [x] 테스트 확인 (`npm run dev`로 로컬 확인) ✅
+  - [x] 커밋 (`git commit -m "Add home link to logo areas"`) ✅
 
 ### 4단계: 페이지 기능 구현 완성 (Day 18-19) 🔄
 - [x] 포스트 페이지 기능 완성 ✅
