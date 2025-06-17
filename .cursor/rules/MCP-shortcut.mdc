@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+<user_rules>
+- "seq" 또는 "sequential" 단어가 언급되면 mcp_server-sequential-thinking_sequentialthinking 도구를 사용합니다
+- "c7","cont","context7" 단어가 언급되면 Context7 관련 도구를 사용합니다
+- "supa", "슈파" 단어가 언급되면, Supabase MCP 관련 도구를 사용합니다
+- "task", "테스크" 단어가 언급되면, mcp-taskmanager 관련 도구를 사용합니다.
+- "voo", "부스' 단어가 언급되면, Vooster-ai MCP 관련 도구를 사용합니다.
+</user_rules>

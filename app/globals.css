@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-text: #101518;
+  --secondary-text: #5c748a;
+  --background: #f9fafb;
+  --secondary-background: #eaedf1;
+}
+
+body {
+  color: var(--primary-text);
+  background: var(--background);
+}
+
+@layer components {
+  .btn {
+    @apply flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 text-sm font-bold leading-normal tracking-[0.015em];
+  }
+
+  .btn-primary {
+    @apply bg-[#eaedf1] text-[#101518];
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-[#eaedf1] text-[#101518];
+  }
+
+  .input {
+    @apply form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#101518] focus:outline-0 focus:ring-0 border-none bg-[#eaedf1] focus:border-none h-full placeholder:text-[#5c748a] px-4 text-base font-normal leading-normal;
+  }
+} 
