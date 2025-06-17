@@ -291,3 +291,62 @@
 4. **컴포넌트 import/export 오류**
    - 원인: 잘못된 경로 또는 누락된 export
    - 해결: index.ts 파일에서 일관된 export 관리
+
+## 2024-06-18: Supabase 삽입 오류 및 레이아웃 문법 오류 디버깅
+
+### 📋 오늘의 작업 요약
+- 글쓰기 페이지 Supabase 데이터 삽입 시 발생하는 400 Bad Request 오류 집중 디버깅
+- Supabase DB 스키마 문제(category 컬럼 부재) 해결
+- 애플리케이션 초기 로드 시 발생하는 레이아웃 파일 문법 오류 확인
+
+### 🛠️ 세부 작업 내용
+
+#### 1. Supabase INSERT 오류 분석 및 디버깅
+- Supabase POST 요청 시 데이터가 요청 본문(Payload)에 정상적으로 담기는 것을 확인
+- 하지만 동시에 삽입하려는 컬럼 목록이 `columns` 쿼리 파라미터로 URL에 비정상적으로 추가되는 현상 파악
+- Supabase API 서버가 이 비정상적인 URL 형식 때문에 400 Bad Request 오류를 반환하는 것을 확인
+- 원인이 `@supabase/supabase-js` 라이브러리 버전(`^2.50.0`)의 내부 버그일 가능성이 가장 높다고 판단
+
+#### 2. Supabase DB 스키마 문제 해결
+- 글 작성 시 발생했던 `Could not find the 'category' column` 오류 분석
+- Supabase 대시보드에서 `posts` 테이블에 `category` (text 타입) 컬럼이 누락된 것을 확인
+- `category` 컬럼을 Supabase 대시보드에서 직접 추가하여 스키마 문제 해결 완료
+
+#### 3. 레이아웃 파일 문법 오류 확인
+- 애플리케이션 로드 시 발생하는 `Uncaught SyntaxError: Invalid or unexpected token` 오류 발견
+- 오류가 컴파일된 `layout.js` 파일의 특정 위치를 가리킴
+- 원본 코드(`app/layout.tsx` 또는 관련 파일)의 JavaScript 문법 오류 가능성을 파악
+- Source Map을 이용해 원본 코드의 정확한 오류 위치를 찾을 필요성 확인
+
+### 🔍 발생한 문제 및 해결 방법
+
+#### 1. Supabase INSERT 시 400 Bad Request 오류 지속
+- **문제**: 글쓰기 페이지에서 Supabase `posts` 테이블에 데이터 삽입 시 400 Bad Request 오류 발생. Network 탭 확인 결과, Payload는 정상이지만 URL에 `columns` 쿼리 파라미터가 비정상적으로 추가됨.
+- **원인**: `@supabase/supabase-js` 라이브러리 버전 `^2.50.0`의 버그로 추정. 라이브러리가 POST 요청 URL을 잘못 구성하고 있음.
+- **해결**: 해당 버전의 버그를 확인하거나, 라이브러리 버전 변경(다운그레이드 또는 업데이트) 또는 `.insert().select()` 체이닝 방식 변경을 시도해야 함. (해결 진행 중)
+
+#### 2. `category` 컬럼 부재 오류
+- **문제**: `posts` 테이블에 `category` 컬럼이 없어 삽입 시 오류 발생.
+- **원인**: 데이터베이스 스키마에 컬럼이 누락됨.
+- **해결**: Supabase 대시보드에서 `posts` 테이블에 `category` (text) 컬럼 추가 완료. (해결됨)
+
+#### 3. `Uncaught SyntaxError` (layout.js)
+- **문제**: 애플리케이션 로드 시 컴파일된 layout.js에서 문법 오류 발생.
+- **원인**: 원본 코드(`app/layout.tsx` 등)에 JavaScript 문법 오류가 존재.
+- **해결**: 브라우저 개발자 도구 Console 탭에서 오류 메시지를 클릭하여 Source Map으로 매핑된 원본 코드의 정확한 위치를 찾아 수정 필요. (해결 진행 중)
+
+### 💡 개선 아이디어 및 피드백
+
+#### 개발 프로세스 개선점
+1.  **라이브러리 업데이트 주의**: 핵심 라이브러리 업데이트 시 변경 사항 및 알려진 버그를 미리 확인하는 절차 강화.
+2.  **오류 발생 시 체계적 분석**: Network 탭, Console 탭, 코드 디버깅 등 단계별 분석 절차 습관화.
+
+#### 다음 작업 계획
+- Supabase 라이브러리 버전 관련 버그 정보 조사 및 버전 변경 시도.
+- `app/layout.tsx` 또는 관련 파일의 문법 오류 정확한 위치 파악 및 수정.
+
+### 📊 현재 진행 상황
+- 전체 진행률: 70%
+- Supabase INSERT 오류: 🔄 원인 파악 완료, 해결 시도 중
+- `category` 컬럼 오류: ✅ 해결 완료
+- Layout 문법 오류: �� 원인 파악 완료, 해결 시도 중
